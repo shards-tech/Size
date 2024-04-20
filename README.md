@@ -24,7 +24,7 @@ type Sizeable = {
 }
 ```
 
-1. Using `Size.from(Script: ScriptTypes)` returns a `Sizeable`
+1. Using `Size.from(Script: ScriptTypes)` returns `Sizeable`
 
 For example:
 
@@ -34,7 +34,7 @@ local SignalSize = Size.from(script.Parent.Signal)
 print(SignalSize.Rounded, SignalSize.Unit) --> 15.59 KB
 ```
 
-2. Using `Size.at(Instance: Instance)` returns a `Sizeable`
+2. Using `Size.at(Instance: Instance)` returns `Sizeable`
 
 For example:
 
@@ -44,7 +44,7 @@ local InstanceSize = Size.at(script.Parent.Packages)
 print(InstanceSize.Convert.Rounded, InstanceSize.Convert.Unit) --> 15.98712 mb
 ```
 
-3. Using `Size.convertBytes(bytes: number)` returns a `(number, UnitTypes)`
+3. Using `Size.convertBytes(bytes: number)` returns `(number, UnitTypes)`
 
 For example:
 
