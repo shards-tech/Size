@@ -1,6 +1,3 @@
--- Services --
-local RunService = game:GetService("RunService")
-
 -- Types --
 type ScriptTypes = Script | LocalScript | ModuleScript
 type UnitTypes = "bytes" | "KB" | "MB" | "GB"
@@ -34,6 +31,7 @@ function Size.convertBytes(bytes: number): (number, UnitTypes)
         return bytes, "bytes"
     end
 end
+
 --[=[
     Calculate the sizes scripts on Folder or Instance.
 ]=]
@@ -43,10 +41,6 @@ function Size.at(Instance: Instance): Sizeable
 
     for _, descendant in ipairs(Descendants) do
         if descendant:IsA("Script") or descendant:IsA("LocalScript") or descendant:IsA("ModuleScript") then
-            if descendant:IsA("Script") and RunService:IsClient() then
-                error("Prohibited reading ServerScript from the client side.")
-            end
-            
             Bytes += #descendant.Source
         end
     end
@@ -77,9 +71,6 @@ end
 ]=]
 function Size.from(Script: ScriptTypes): Sizeable
     assert(table.find(Size.ScriptTypes, typeof(Script)), "Script must be a ScriptType!")
-    if typeof(Script) == "Script" and RunService:IsClient() then
-        error("Prohibited reading ServerScript from the client side.")
-    end
 
     local Source = Script.Source
     local Bytes = #Source

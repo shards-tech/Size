@@ -1,6 +1,6 @@
 # ✨ Size
 
-Returns the size of dependencies or scripts on a Folder or Instance.
+Returns the size of dependencies or scripts on a Folder or Instance. Due to Roblox prohibits `script.Source` only to Plugin,this package is for the Plugins to use.
 
 Install using wally: 
 

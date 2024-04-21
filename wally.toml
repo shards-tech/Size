@@ -1,9 +1,9 @@
 [package]
 name = "shards-tech/size"
-description = "Returns the size of dependencies or scripts on a Folder or Instance. https://github.com/shards-tech/size.git"
+description = "Returns the size of dependencies or scripts on a Folder or Instance (Plugin Only). https://github.com/shards-tech/size.git"
 authors = ["Bloomy <dequeyuri@gmail.com>"]
 
-version = "0.1.0"
+version = "0.1.1"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
