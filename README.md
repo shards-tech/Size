@@ -5,7 +5,7 @@ Returns the size of dependencies or scripts on a Folder or Instance. Due to Robl
 Install using wally: 
 
 ```toml
-Size = "shards-tech/size@0.1.0"
+Size = "shards-tech/size@0.1.1"
 ```
 
 ## 📃 Documentation
